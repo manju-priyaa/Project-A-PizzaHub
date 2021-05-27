@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PizzaOrderingSystem.Models.Pizza>
+
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1> Our Menu</h1>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">@Html.DisplayFor(modelItem => item.name)</h5>
+                                <br />
+                                <br />
+                                @Html.DisplayFor(modelItem => item.description)
+                                <br />
+                                <br />
+                                @if (item.isVeg == true)
+                                {
+                                    <div class="btn btn-success">
+                                        Veg
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="btn btn-danger">
+                                       Non Veg
+                                    </div>
+                                }
+
+                                @*@Html.DisplayFor(modelItem => item.isVeg)*@
+                                <br />
+                                <br />
+                                @Html.DisplayFor(modelItem => item.amount)
+                            </div>
+                        </div>
+
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <div class="btn btn-outline-dark mt-auto">
+                                    @Html.ActionLink("CustomizePizza", "CustPizza", item)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            </div>
+    </div>
+</section>
