@@ -72,8 +72,7 @@ namespace PizzaOrderingSystem.Controllers
             c.pizzaId = pizza.id;
             c.name = pizza.name;
             c.perPizzaAmount = pizza.amount;
-            //ViewBag.perpizzaamount = c.perPizzaAmount;
-           // TempData["Perpizzaamount"] = c.perPizzaAmount;
+
 
 
 
@@ -92,25 +91,18 @@ namespace PizzaOrderingSystem.Controllers
         public IActionResult CustPizza(CustPizza custpizza)
         {
             var dbtoppings = _context.Toppings.ToList();
-            //var perPizzaAmount = ViewBag.perpizzaamount;
-            //ViewBag.toppingname = dbtoppings.Select(i => i.name).ToList();
-            //double perpizzaamount = Convert.ToDouble(TempData["Perpizzaamount"]);
-            //custpizza.amount = 0;
-           // custpizza.perPizzaAmount = Convert.ToDouble(TempData.Peek("Perpizzaamount"));
-
             var amount = dbtoppings.Where(a => a.name == custpizza.toppings).Select(a => a.amount).FirstOrDefault();
             custpizza.perPizzaAmount = (custpizza.amount + amount) * custpizza.quantity;
 
 
             Cart cart = new Cart();
-            //cart.id = custpizza.id;
             cart.pizzaname = custpizza.name;
             cart.crust = custpizza.crust;
             cart.toppings = custpizza.toppings;
             cart.quantity = custpizza.quantity;
             cart.custpizzaprice = custpizza.perPizzaAmount;
             _cartrepo.Add(cart);
-            //_custpizzarepo.Add(custpizza);
+
 
             return RedirectToAction("Cart","Home");
         }

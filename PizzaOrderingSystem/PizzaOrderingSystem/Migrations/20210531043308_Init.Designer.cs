@@ -10,7 +10,7 @@ using PizzaOrderingSystem.Models;
 namespace PizzaOrderingSystem.Migrations
 {
     [DbContext(typeof(PizzaContext))]
-    [Migration("20210530163759_Init")]
+    [Migration("20210531043308_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -188,6 +188,9 @@ namespace PizzaOrderingSystem.Migrations
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("isVeg")
                         .HasColumnType("bit");
 
@@ -204,6 +207,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 1,
                             amount = 499.99000000000001,
                             description = "Speacially made with Paneer and then grilled to make extra tasty!!!",
+                            image = "~/imgs/panner.jpg",
                             isVeg = true,
                             name = "Paneer Grilled Pizza"
                         },
@@ -212,6 +216,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 2,
                             amount = 599.99000000000001,
                             description = "Speacially made with Mushroom  to make extra tasty!!!",
+                            image = "~/imgs/mushroom.jpg",
                             isVeg = true,
                             name = "Mushroom Tandoori Pizza"
                         },
@@ -220,6 +225,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 3,
                             amount = 799.99000000000001,
                             description = "Speacially made with Chicken and then grilled to make extra tasty!!!",
+                            image = "~/imgs/chicken.jpg",
                             isVeg = false,
                             name = "Chicken Grilled Pizza"
                         },
@@ -228,6 +234,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 4,
                             amount = 699.99000000000001,
                             description = "Speacially made with Bacon Sausage and then grilled to make extra tasty!!!",
+                            image = "~/imgs/Baconpizza.jpg",
                             isVeg = false,
                             name = "Bacon Grilled Pizza"
                         },
@@ -236,6 +243,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 5,
                             amount = 499.99000000000001,
                             description = "Speacially made with BabyCorn and then grilled to make extra tasty!!!",
+                            image = "~/imgs/babycorn.jpg",
                             isVeg = true,
                             name = "Baby Corn Grilled"
                         },
@@ -244,6 +252,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 6,
                             amount = 599.99000000000001,
                             description = "Speacially made with pepper Chicken and onions  to make extra tasty!!!",
+                            image = "~/imgs/pepperandchicken.jpg",
                             isVeg = false,
                             name = "Pepper Barbecure & Onion"
                         },
@@ -252,6 +261,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 7,
                             amount = 799.99000000000001,
                             description = "Speacially made with Meal Makers to make extra tasty!!!",
+                            image = "~/imgs/soya.png",
                             isVeg = true,
                             name = "Soya Golden Light"
                         },
@@ -260,6 +270,7 @@ namespace PizzaOrderingSystem.Migrations
                             id = 8,
                             amount = 899.99000000000001,
                             description = "Speacially made with Barbeque Chicken and golden corn to make extra tasty!!!",
+                            image = "~/imgs/img1.jpg",
                             isVeg = false,
                             name = "Chicken Golden Light"
                         });

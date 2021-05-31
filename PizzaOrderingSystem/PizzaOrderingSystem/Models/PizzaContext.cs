@@ -27,14 +27,14 @@ namespace PizzaOrderingSystem.Models
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 1, name = "Paneer Grilled Pizza", description = "Speacially made with Paneer and then grilled to make extra tasty!!!",isVeg=true,amount=499.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 2, name = "Mushroom Tandoori Pizza", description = "Speacially made with Mushroom  to make extra tasty!!!", isVeg = true, amount = 599.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 3, name = "Chicken Grilled Pizza", description = "Speacially made with Chicken and then grilled to make extra tasty!!!", isVeg = false, amount = 799.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 4, name = "Bacon Grilled Pizza", description = "Speacially made with Bacon Sausage and then grilled to make extra tasty!!!", isVeg = false, amount = 699.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 5, name = "Baby Corn Grilled", description = "Speacially made with BabyCorn and then grilled to make extra tasty!!!", isVeg = true, amount = 499.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 6, name = "Pepper Barbecure & Onion", description = "Speacially made with pepper Chicken and onions  to make extra tasty!!!", isVeg = false, amount = 599.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 7, name = "Soya Golden Light", description = "Speacially made with Meal Makers to make extra tasty!!!", isVeg = true, amount = 799.99 });
-            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 8, name = "Chicken Golden Light", description = "Speacially made with Barbeque Chicken and golden corn to make extra tasty!!!", isVeg = false, amount = 899.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 1,image="~/imgs/panner.jpg",name = "Paneer Grilled Pizza", description = "Speacially made with Paneer and then grilled to make extra tasty!!!",isVeg=true,amount=499.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 2, image = "~/imgs/mushroom.jpg", name = "Mushroom Tandoori Pizza", description = "Speacially made with Mushroom  to make extra tasty!!!", isVeg = true, amount = 599.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 3, image = "~/imgs/chicken.jpg", name = "Chicken Grilled Pizza", description = "Speacially made with Chicken and then grilled to make extra tasty!!!", isVeg = false, amount = 799.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 4, image = "~/imgs/Baconpizza.jpg", name = "Bacon Grilled Pizza", description = "Speacially made with Bacon Sausage and then grilled to make extra tasty!!!", isVeg = false, amount = 699.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 5, image = "~/imgs/babycorn.jpg", name = "Baby Corn Grilled", description = "Speacially made with BabyCorn and then grilled to make extra tasty!!!", isVeg = true, amount = 499.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 6, image = "~/imgs/pepperandchicken.jpg", name = "Pepper Barbecure & Onion", description = "Speacially made with pepper Chicken and onions  to make extra tasty!!!", isVeg = false, amount = 599.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 7, image = "~/imgs/soya.png", name = "Soya Golden Light", description = "Speacially made with Meal Makers to make extra tasty!!!", isVeg = true, amount = 799.99 });
+            modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 8, image = "~/imgs/img1.jpg", name = "Chicken Golden Light", description = "Speacially made with Barbeque Chicken and golden corn to make extra tasty!!!", isVeg = false, amount = 899.99 });
 
             modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 1, name = "Pepperoni(+30 Rs)",amount = 30 });
             modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 2, name = "Mushroom(+40 Rs)", amount = 40 });

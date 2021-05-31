@@ -15,7 +15,7 @@
             {
                 <div class="col mb-5">
                     <div class="card h-100">
-                        @*<img class="card-img-top" src="~/imgs/img3.jpg" alt="..." />*@
+                        <img src="@Url.Content(item.image)" alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder">@Html.DisplayFor(modelItem => item.name)</h5>
@@ -33,14 +33,12 @@
                                 else
                                 {
                                     <div class="btn btn-danger">
-                                       Non Veg
+                                        Non Veg
                                     </div>
                                 }
-
-                                @*@Html.DisplayFor(modelItem => item.isVeg)*@
                                 <br />
                                 <br />
-                                @Html.DisplayFor(modelItem => item.amount)
+                                @Html.DisplayFor(modelItem => item.amount) .Rs (With Tax)
                             </div>
                         </div>
 
