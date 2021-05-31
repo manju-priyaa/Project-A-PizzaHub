@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PizzaOrderingSystem.Migrations
 {
@@ -12,7 +13,11 @@ namespace PizzaOrderingSystem.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    totalAmount = table.Column<double>(type: "float", nullable: false)
+                    pizzaname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    crust = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    quantity = table.Column<int>(type: "int", nullable: false),
+                    toppings = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    custpizzaprice = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,21 +38,6 @@ namespace PizzaOrderingSystem.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Customers",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    phoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    address = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customers", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "CustPizzas",
                 columns: table => new
                 {
@@ -55,12 +45,11 @@ namespace PizzaOrderingSystem.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     pizzaId = table.Column<int>(type: "int", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    crust = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    quantity = table.Column<int>(type: "int", nullable: false),
                     perPizzaAmount = table.Column<double>(type: "float", nullable: false),
-                    toppingAmount = table.Column<double>(type: "float", nullable: false),
-                    amount = table.Column<double>(type: "float", nullable: false),
-                    cartId = table.Column<int>(type: "int", nullable: false)
+                    quantity = table.Column<int>(type: "int", nullable: false),
+                    crust = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    toppings = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    amount = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,9 +62,11 @@ namespace PizzaOrderingSystem.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    customerId = table.Column<int>(type: "int", nullable: false),
-                    amount = table.Column<double>(type: "float", nullable: false),
-                    cartId = table.Column<int>(type: "int", nullable: false)
+                    customerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    phoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    datetime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    amount = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -149,16 +140,16 @@ namespace PizzaOrderingSystem.Migrations
                 columns: new[] { "id", "amount", "name" },
                 values: new object[,]
                 {
-                    { 1, 30.0, "Pepperoni" },
-                    { 2, 40.0, "Mushroom" },
-                    { 3, 50.0, "Onions" },
-                    { 4, 70.0, "Bacon" },
-                    { 5, 80.0, "Extra Cheese" },
-                    { 6, 89.0, "Black Olives" },
-                    { 7, 100.0, "Green Peppers" },
-                    { 8, 150.0, "Sausage" },
-                    { 9, 80.0, "Spinach" },
-                    { 10, 90.0, "Pineapple" }
+                    { 1, 30.0, "Pepperoni(+30 Rs)" },
+                    { 2, 40.0, "Mushroom(+40 Rs)" },
+                    { 3, 50.0, "Onions(+50 Rs)" },
+                    { 4, 70.0, "Bacon(+70 Rs)" },
+                    { 5, 80.0, "Extra Cheese(+80 Rs)" },
+                    { 6, 90.0, "Black Olives(+90 Rs)" },
+                    { 7, 100.0, "Green Peppers(+100 Rs)" },
+                    { 8, 150.0, "Sausage(+150 Rs)" },
+                    { 9, 80.0, "Spinach(+80 Rs)" },
+                    { 10, 90.0, "Pineapple(+90 Rs)" }
                 });
         }
 
@@ -169,9 +160,6 @@ namespace PizzaOrderingSystem.Migrations
 
             migrationBuilder.DropTable(
                 name: "Crusts");
-
-            migrationBuilder.DropTable(
-                name: "Customers");
 
             migrationBuilder.DropTable(
                 name: "CustPizzas");

@@ -28,6 +28,11 @@ namespace PizzaOrderingSystem
             services.AddDbContext<PizzaContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:PizzaOrderCon"]));
             services.AddControllersWithViews();
             services.AddScoped<IRepo<Pizza>, PizzaManager>();
+            services.AddScoped<IRepo<Toppings>, ToppingsManager>();
+            services.AddScoped<IRepo<Crusts>, CrustManager>();
+            services.AddScoped<ICustpizzarepo<CustPizza>, CustPizzaManager>();
+            services.AddScoped<ICartRepo<Cart>, CartManager>();
+            services.AddScoped<IOrderrepo<Orders>, OrderManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

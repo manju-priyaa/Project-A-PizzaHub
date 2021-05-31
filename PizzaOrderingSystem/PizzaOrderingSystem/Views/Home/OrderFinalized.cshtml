@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "OrderFinalized";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="~/imgs/delivaryimg.jpg" alt="delivaryimg" /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">Your Order Has Been Finalized</h1>
+                <br>
+                <br>
+                <div class="fs-5 mb-5">
+                    View Your Order here ... <a class="nav-link text-black-50" asp-area="" asp-controller="Home" asp-action="Ordersummary">Your Order</a>
+                </div>
+                <div class="row">
+                    For further Queries ?
+                    Contact Us Here ...<a class="nav-link text-black-50" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+
+</section>
+<br />
+<br />
+<br />
+<br />
+<style>
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+
+        a:hover {
+            color: white;
+        }
+</style>
+
+

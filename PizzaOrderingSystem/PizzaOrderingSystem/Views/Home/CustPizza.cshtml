@@ -1,9 +1,81 @@
-﻿@model IEnumerable<PizzaOrderingSystem.Models.Pizza>
+﻿@*@model IEnumerable<PizzaOrderingSystem.Models.CustPizza>*@
+@*@model PizzaOrderingSystem.Models.MergeCustPizza*@
+@model PizzaOrderingSystem.Models.CustPizza
+
 @{
     ViewData["Title"] = "CustPizza";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>CustPizza</h1>
 
-@Html.DisplayFor(model => model)
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="container align-items-center">
+            <form class="container">
+                <br />
+                <br />
+                <h2>Customize Your Pizza : @Model.name</h2>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="price"><h4>Pizza Price</h4></label>
+                            <input asp-for="perPizzaAmount" class="form-control" value=@Model.perPizzaAmount disabled>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="quantity"><h4>Quantity</h4></label>
+                            <input asp-for="quantity" class="form-control" min="1" max="20" />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="crust"><h4>Modify Crust</h4></label>
+                            @Html.DropDownList("crust", new SelectList(ViewBag.crusts, "Crusts"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="toppings"><h4>Add Toppings(Extra Cost)</h4></label>
+                            @Html.DropDownList("toppings", new SelectList(ViewBag.toppingname, "Toppings"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <button type="submit" class="btn btn-dark" formmethod="post">Add To Cart</button>
+                <br />
+                <br />
+            </form>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+

@@ -12,11 +12,12 @@ namespace PizzaOrderingSystem.Models
         [Key]
         public int id { get; set; }
 
-        public int customerId { get; set; }
+        public string customerName { get; set; }
+        public string phoneNumber { get; set; }
 
+        public string address { get; set; }
+        public DateTime  datetime { get; set; }
+        [DisplayFormat(DataFormatString = "{0:n0}")]
         public double amount { get; set; }
-
-        [ForeignKey("Cart")]
-        public int cartId { get; set; }
     }
 }

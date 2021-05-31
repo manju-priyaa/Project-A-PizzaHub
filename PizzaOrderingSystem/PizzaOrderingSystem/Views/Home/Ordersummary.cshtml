@@ -1,0 +1,88 @@
+﻿@model IEnumerable<PizzaOrderingSystem.Models.Cart>
+
+@{
+    ViewData["Title"] = "Ordersummary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Your Orders</h1>
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">@Html.DisplayFor(modelItem => item.pizzaname)</h5>
+                                <br />
+                                <br />
+                                Crust : @Html.DisplayFor(modelItem => item.crust)
+                                <br />
+                                Toppings : @Html.DisplayFor(modelItem => item.toppings)
+                                <br />
+                                Quantity : @Html.DisplayFor(modelItem => item.quantity)
+                                <br />
+                                Price : @Html.DisplayFor(modelItem => item.custpizzaprice)
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+            <br />
+            <br />
+            <div class="btn btn-success mt-auto">
+                Total Order Amount : @ViewBag.totalamount
+
+            </div>
+            <br />
+            <br />
+            <div class="btn btn-dark mt-auto" >
+                @Html.ActionLink("Back To Home", "DeleteCart")
+
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+
+</section>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<style>
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+
+        a:hover {
+            color: white;
+        }
+</style>
+
+

@@ -5,12 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Views\Home\Cart.cshtml" />
     <None Include="Views\Home\Home.cshtml" />
-    <None Include="Views\Home\Orders.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Amqp" Version="2.4.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
       <PrivateAssets>all</PrivateAssets>

@@ -1,8 +1,88 @@
-﻿
+﻿@model IEnumerable<PizzaOrderingSystem.Models.Cart>
+
 @{
     ViewData["Title"] = "Cart";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Cart</h1>
+<br />
+<br />
+<h1> Your Cart </h1>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">@Html.DisplayFor(modelItem => item.pizzaname)</h5>
+                                <br />
+                                <br />
+                                Crust : @Html.DisplayFor(modelItem => item.crust)
+                                <br />
+                                Toppings : @Html.DisplayFor(modelItem => item.toppings)
+                                <br />
+                                Quantity : @Html.DisplayFor(modelItem => item.quantity)
+                                <br />
+                                Price : @Html.DisplayFor(modelItem => item.custpizzaprice)
+                                <br />
+                                <br />
+                            </div>
+                        </div>
 
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <div class="btn btn-dark mt-auto">
+                                    @Html.ActionLink("Remove from cart", "Delete", item)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            
+
+
+        </div>
+    </div>
+
+</section>
+<footer>
+    <br />
+    <br />
+    <br />
+    <div class="btn btn-dark mt-auto">
+        @Html.ActionLink("Proceed To Buy", "Orders")
+    </div>
+    <div class="btn btn-dark mt-auto">
+        @Html.ActionLink("Back To Menu", "Menu")
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</footer>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<style>
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+
+        a:hover {
+            color: white;
+        }
+</style>

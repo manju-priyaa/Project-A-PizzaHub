@@ -7,17 +7,116 @@
 @*<h1>Home</h1>
     <h6> Welcome to Pizza Hub</h6>
     <h4>Wanted Some Yummy Pizza ? Come on LetsStart Searching Your Favorite pizza in Meny page</h4>*@
-<header class="m-0 bg-dark py-5">
-    <div class="text-center text-white">
-        <h1 class="display-4 fw-bolder">Welcome to Pizza Hub</h1>
-        <div class="text-white text-center">
-            Wanted Some Yummy Pizza ? Come on LetsStart Searching Your Favorite pizza in
-            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Menu">Our Menu</a>
+@*<header class="m-0 bg-dark py-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Welcome to Pizza Hub</h1>
+            <div class="text-white text-center">
+                Wanted Some Yummy Pizza's ? Come on LetsStart Searching Your Favorite pizza in
+                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Menu">Our Menu</a>
+            </div>
+        </div>
+
+        <img class="d-block w-100" src="~/imgs/img3.jpg" alt="pizzaslide1">
+
+    </header>*@
+
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2"> Welcome to Pizza Hub</h1>
+                    <p class="lead fw-normal text-white-50 mb-4"> Wanted Some Yummy Pizza's ? Come on LetsStart Searching Your Favorite pizza in our Menu Page</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-outline-light btn-lg px-4" asp-area="" asp-controller="Home" asp-action="Menu">Our Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="~/imgs/logopizza.jpg" alt="..." /></div>
         </div>
     </div>
-
-    <img class="d-block w-100" src="~/imgs/img3.jpg" alt="pizzaslide1">
-
 </header>
+<!-- Features section-->
+<section class="py-5" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">We are Consistent in our Vision ...</h2></div>
+            <div class="col-lg-8">
+                <div class="row gx-5 row-cols-1 row-cols-md-2">
+                    <div class="col mb-5 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h5">Customer Satisfaction</h2>
+                        <p class="mb-0">Pizza Hub has a best customer satisfaction worldwide, which will continue forever .</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h5">Faster delivery</h2>
+                        <p class="mb-0">Pizza Hub gaurentee you that the pizza will be served hot within the specified Time.</p>
+                    </div>
+                    <div class="col mb-5 mb-md-0 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h5">Quality services</h2>
+                        <p class="mb-0">We Provide the best Quality in the market with completly Healthy products .</p>
+                    </div>
+                    <div class="col h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h5">The Best Pizza Bakers.</h2>
+                        <p class="mb-0">We bet that you will never regret.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog preview section-->
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder">Signature Pizza's</h2>
+                    <p class="lead fw-normal text-muted mb-5">The Below specified pizza's are the signature dishes of our Shop.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/imgs/pepperandchicken.jpg" alt="Pepper Barbecure & Onion" />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Special</div>
+                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Pepper Barbecure & Onion</h5></a>
+                        <p class="card-text mb-0">Speacially made with pepper Chicken and onions  to make extra tasty!!!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/imgs/soya.png" alt="Soya Golden Light" />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Special</div>
+                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Soya Golden Light</h5></a>
+                        <p class="card-text mb-0">Speacially made with Meal Makers to make extra tasty!!!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/imgs/Baconpizza.jpg" alt="Bacon Grilled Pizza" />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Special</div>
+                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Bacon Grilled Pizza</h5></a>
+                        <p class="card-text mb-0">Speacially made with Bacon Sausage and then grilled to make extra tasty!!!</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
 
 

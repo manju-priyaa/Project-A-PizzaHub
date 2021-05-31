@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "02P87L7yxAcQ/faZ3yPssDvNmOOsqpd56rz5gSi/wsGMtkXgxl1h05tGr6GyfSVlMQdRVwX/ykfxycQiY08YHA==",
+  "dgSpecHash": "A/JeMYpmSV6WbhztEDUHxcsT0Al3fPSUzNiZaJmCCjqEmdVENa+E6dIQEd+vjg/nhSku8/AVfrXYj22G41njYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Manju Priyaa\\Desktop\\MANJU\\softura\\Final_Project\\PizzaOrderingSystem\\PizzaOrderingSystem\\PizzaOrderingSystem.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
+    "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.azure.amqp\\2.4.13\\microsoft.azure.amqp.2.4.13.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.4\\microsoft.codeanalysis.analyzers.2.9.4.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.codeanalysis.common\\3.3.1\\microsoft.codeanalysis.common.3.3.1.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.3.1\\microsoft.codeanalysis.csharp.3.3.1.nupkg.sha512",
@@ -112,6 +113,9 @@
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.net.webheadercollection\\4.0.1\\system.net.webheadercollection.4.0.1.nupkg.sha512",
+    "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.net.websockets\\4.0.0\\system.net.websockets.4.0.0.nupkg.sha512",
+    "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.net.websockets.client\\4.0.2\\system.net.websockets.client.4.0.2.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Manju Priyaa\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",

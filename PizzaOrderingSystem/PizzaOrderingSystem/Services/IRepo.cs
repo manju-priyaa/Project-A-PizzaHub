@@ -8,7 +8,6 @@ namespace PizzaOrderingSystem.Services
     public interface IRepo<T>
     {
         IEnumerable<T> GetAll();
-        T Get(int id);
-        void Add(T t);
+       
     }
 }

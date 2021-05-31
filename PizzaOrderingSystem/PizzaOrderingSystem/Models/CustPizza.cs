@@ -17,18 +17,14 @@ namespace PizzaOrderingSystem.Models
 
         public string name { get; set; }
 
-        public string crust { get; set; }
+        public double perPizzaAmount { get; set; }
 
         public int quantity { get; set; }
 
-        public double perPizzaAmount { get; set; }
+        public string crust { get; set; }
 
-        public double toppingAmount { get; set; }
+        public string toppings { get; set; }
 
-        public double amount { get; set; } 
-
-
-        [ForeignKey("Cart")]
-        public int cartId { get; set; }
+        public double amount { get; set; }  
     }
 }

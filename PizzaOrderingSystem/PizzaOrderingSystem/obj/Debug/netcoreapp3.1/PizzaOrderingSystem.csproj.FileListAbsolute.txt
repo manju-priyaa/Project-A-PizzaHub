@@ -148,7 +148,13 @@ C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\Pi
 C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Home.cshtml.g.cs
-C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Orders.cshtml.g.cs
-C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cart.cshtml.g.cs
 C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\CustPizza.cshtml.g.cs
 C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Menu.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cart.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Delete.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Orders.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Noitemcart.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderFinalized.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Ordersummary.cshtml.g.cs
+C:\Users\Manju Priyaa\Desktop\MANJU\softura\Final_Project\PizzaOrderingSystem\PizzaOrderingSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\ContactUs.cshtml.g.cs

@@ -16,36 +16,6 @@ namespace PizzaOrderingSystem.Services
             _context = context;
             _logger = logger;
         }
-        public void Add(Pizza t)
-        {
-            try
-            {
-                _context.Pizzas.Add(t);
-                _context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-
-                _logger.LogDebug(e.Message);
-            }
-        }
-        public Pizza Get(int id)
-        {
-            try
-            {
-                Pizza pizza = _context.Pizzas.FirstOrDefault(a => a.id == id);
-                return pizza;
-
-            }
-            catch (Exception e)
-            {
-
-                _logger.LogDebug(e.Message);
-            }
-            return null;
-
-        }
-
         public IEnumerable<Pizza> GetAll()
         {
             try

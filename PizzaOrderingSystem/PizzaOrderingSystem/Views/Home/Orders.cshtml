@@ -1,8 +1,95 @@
-﻿
+﻿@model PizzaOrderingSystem.Models.Orders
+
 @{
     ViewData["Title"] = "Orders";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<br/>
+<div class="container">
+    <form>
+        <h1>Yummy Pizza's is few more steps ahead</h1>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name"><h4>Please Enter Your Name</h4></label>
+                    <input asp-for="customerName" class="form-control" id="name" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="number"><h4>Please Enter Your Phone Number</h4></label>
+                    <input asp-for="phoneNumber" class="form-control" pattern="[1-9]{1}[0-9]{9}" title="Please enter exactly 10 digits" id="phonenumber" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="address"><h4>Please Enter Your Address</h4></label>
+                    <input asp-for="address" class="form-control" id="address" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="address"><h4>Please Enter the Date and Time For the Delivery</h4></label>
+                    <input asp-for="datetime" class="form-control" id="datetime">
+                </div>
+            </div>
+        </div>
+        <br />
+        
+        <h2>Your Cart Amount : @string.Format("{0:n2}", Model.amount)  .Rs</h2>
+        <br />
+        <h5> Mode Of Payment : Cash On Delivery (We accept only Indian Currency(Rupees))</h5>
+        <br />
+        <button type="submit" class="btn btn-dark" onclick="showalert()" formmethod="post">Finalize Order</button>
+        <div class="btn btn-dark mt-auto">
+            @Html.ActionLink("Back To Cart", "Cart")
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </form>
+</div>
+<style>
+    a {
+        color: white;
+        text-decoration: none;
+    }
 
-<h1>Orders</h1>
+
+        a:hover {
+            color: white;
+        }
+</style>
+
+<script>
+    function showalert() {
+        if (document.getElementById('name').value.length == 0 || document.getElementById('phonenumber').value.length == 0 || document.getElementById('address').value.length == 0 || document.getElementById('datetime').value.length == 0)
+        {
+            alert("Please fill all the required Fields");
+            return false;
+
+        }
+          alert("There is no returning Back...Do You want to finalize your order");
+          return true;
+        
+    }
+
+</script>
 
