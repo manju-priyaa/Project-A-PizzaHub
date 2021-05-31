@@ -38,14 +38,14 @@
                                 }
                                 <br />
                                 <br />
-                                @Html.DisplayFor(modelItem => item.amount) .Rs (With Tax)
+                                Rs. @Html.DisplayFor(modelItem => item.amount)  (With Tax)
                             </div>
                         </div>
 
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center">
                                 <div class="btn btn-dark mt-auto">
-                                    @Html.ActionLink("CustomizePizza", "CustPizza", item)
+                                    @Html.ActionLink("Customize Pizza", "CustPizza", item)
                                 </div>
                             </div>
                         </div>
