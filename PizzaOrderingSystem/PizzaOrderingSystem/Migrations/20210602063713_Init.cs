@@ -62,9 +62,9 @@ namespace PizzaOrderingSystem.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    customerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    phoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    customerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    phoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     datetime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     amount = table.Column<double>(type: "float", nullable: false)
                 },
@@ -130,10 +130,10 @@ namespace PizzaOrderingSystem.Migrations
                     { 7, 799.99000000000001, "Speacially made with Meal Makers to make extra tasty!!!", "~/imgs/soya.png", true, "Soya Golden Light" },
                     { 6, 599.99000000000001, "Speacially made with pepper Chicken and onions  to make extra tasty!!!", "~/imgs/pepperandchicken.jpg", false, "Pepper Barbecure & Onion" },
                     { 5, 499.99000000000001, "Speacially made with BabyCorn and then grilled to make extra tasty!!!", "~/imgs/babycorn.jpg", true, "Baby Corn Grilled" },
-                    { 4, 699.99000000000001, "Speacially made with Bacon Sausage and then grilled to make extra tasty!!!", "~/imgs/Baconpizza.jpg", false, "Bacon Grilled Pizza" },
                     { 3, 799.99000000000001, "Speacially made with Chicken and then grilled to make extra tasty!!!", "~/imgs/chicken.jpg", false, "Chicken Grilled Pizza" },
                     { 2, 599.99000000000001, "Speacially made with Mushroom  to make extra tasty!!!", "~/imgs/mushroom.jpg", true, "Mushroom Tandoori Pizza" },
-                    { 1, 499.99000000000001, "Speacially made with Paneer and then grilled to make extra tasty!!!", "~/imgs/panner.jpg", true, "Paneer Grilled Pizza" }
+                    { 1, 499.99000000000001, "Speacially made with Paneer and then grilled to make extra tasty!!!", "~/imgs/panner.jpg", true, "Paneer Grilled Pizza" },
+                    { 4, 699.99000000000001, "Speacially made with Bacon Sausage and then grilled to make extra tasty!!!", "~/imgs/Baconpizza.jpg", false, "Bacon Grilled Pizza" }
                 });
 
             migrationBuilder.InsertData(
@@ -141,16 +141,17 @@ namespace PizzaOrderingSystem.Migrations
                 columns: new[] { "id", "amount", "name" },
                 values: new object[,]
                 {
-                    { 1, 30.0, "Pepperoni(+30 Rs)" },
-                    { 2, 40.0, "Mushroom(+40 Rs)" },
-                    { 3, 50.0, "Onions(+50 Rs)" },
-                    { 4, 70.0, "Bacon(+70 Rs)" },
-                    { 5, 80.0, "Extra Cheese(+80 Rs)" },
-                    { 6, 90.0, "Black Olives(+90 Rs)" },
-                    { 7, 100.0, "Green Peppers(+100 Rs)" },
-                    { 8, 150.0, "Sausage(+150 Rs)" },
-                    { 9, 80.0, "Spinach(+80 Rs)" },
-                    { 10, 90.0, "Pineapple(+90 Rs)" }
+                    { 10, 80.0, "Spinach(+80 Rs)" },
+                    { 1, 0.0, "None" },
+                    { 2, 30.0, "Pepperoni(+30 Rs)" },
+                    { 3, 40.0, "Mushroom(+40 Rs)" },
+                    { 4, 50.0, "Onions(+50 Rs)" },
+                    { 5, 70.0, "Bacon(+70 Rs)" },
+                    { 6, 80.0, "Extra Cheese(+80 Rs)" },
+                    { 7, 90.0, "Black Olives(+90 Rs)" },
+                    { 8, 100.0, "Green Peppers(+100 Rs)" },
+                    { 9, 150.0, "Sausage(+150 Rs)" },
+                    { 11, 90.0, "Pineapple(+90 Rs)" }
                 });
         }
 

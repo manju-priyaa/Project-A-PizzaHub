@@ -18,11 +18,11 @@ namespace PizzaOrderingSystem.Models
         public string name { get; set; }
 
         public double perPizzaAmount { get; set; }
-
+        [Required]
+        [Range(1, 20, ErrorMessage = "The Quantity should be between 1 to 20")]
         public int quantity { get; set; }
-
         public string crust { get; set; }
-
+        
         public string toppings { get; set; }
 
         public double amount { get; set; }  

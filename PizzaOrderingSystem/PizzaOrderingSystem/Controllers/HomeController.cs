@@ -199,7 +199,6 @@ namespace PizzaOrderingSystem.Controllers
                                        select i.custpizzaprice).Sum();
                 return View(cart);
 
-
         }
             /// <summary>
             /// This will catch the exception and return to view

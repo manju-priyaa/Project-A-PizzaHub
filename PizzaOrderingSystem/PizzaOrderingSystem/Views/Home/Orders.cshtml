@@ -14,8 +14,9 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="name"><h4>Please Enter Your Name</h4></label>
-                    <input asp-for="customerName" class="form-control" id="name" />
+                    <label for="name" ><h6> Name : </h6></label>
+                    <input asp-for="customerName" class="form-control" id="name"  required/>
+                    <span asp-validation-for="customerName" class="text-danger" ></span>
                 </div>
             </div>
         </div>
@@ -24,8 +25,9 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="number"><h4>Please Enter Your Phone Number</h4></label>
-                    <input asp-for="phoneNumber" class="form-control" pattern="[1-9]{1}[0-9]{9}" title="Please enter exactly 10 digits" id="phonenumber" />
+                    <label for="number"><h6> Phone Number : </h6></label>
+                    <input asp-for="phoneNumber" class="form-control" pattern="[1-9]{1}[0-9]{9}" title="Please enter exactly 10 digits" id="phonenumber"  required />
+                    <span asp-validation-for="phoneNumber" class="text-danger"></span>
                 </div>
             </div>
         </div>
@@ -34,8 +36,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="address"><h4>Please Enter Your Address</h4></label>
-                    <input asp-for="address" class="form-control" id="address" />
+                    <label for="address"><h6> Address : </h6></label>
+                    <textarea asp-for="address" class="form-control" id="address"  required></textarea>
+                    <span asp-validation-for="address" class="text-danger" ></span>
+
                 </div>
             </div>
         </div>
@@ -45,18 +49,24 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="address"><h4>Please Enter the Date and Time For the Delivery</h4></label>
-                    <input asp-for="datetime" class="form-control" id="datetime">
+                    <label for="datetime"><h6> Preferred delivery time: </h6></label>
+                    <input asp-for="datetime" class="form-control" id="datetime"  required>
+                    <span asp-validation-for="datetime" class="text-danger" ></span>
+
                 </div>
             </div>
         </div>
         <br />
-        
+
         <h2>Your Cart Amount : Rs.  @string.Format("{0:n2}", Model.amount)  </h2>
         <br />
-        <h5> Mode Of Payment : Cash On Delivery (We accept only Indian Currency(Rupees))</h5>
+        <h7> Mode Of Payment : Cash On Delivery (We accept only Indian Currency(Rupees))</h7>
         <br />
-        <button type="submit" class="btn btn-dark" onclick="showalert()" formmethod="post">Finalize Order</button>
+        <br />
+        <h7> Once you click on Finalize order there is no returning back ...</h7>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-dark"  formmethod="post">Finalize Order</button>
         <div class="btn btn-dark mt-auto">
             @Html.ActionLink("Back To Cart", "Cart")
         </div>
@@ -78,18 +88,13 @@
         }
 </style>
 
-<script>
-    function showalert() {
-        if (document.getElementById('name').value.length == 0 || document.getElementById('phonenumber').value.length == 0 || document.getElementById('address').value.length == 0 || document.getElementById('datetime').value.length == 0)
-        {
-            alert("Please fill all the required Fields");
-            return false;
-
-        }
-          alert("There is no returning Back...Do You want to finalize your order");
-          return true;
+@*<script>
+    function showalert()
+    {
+        alert("The Order Has been finalized...Thank You for Ordering !!")
         
-    }
+    };
 
-</script>
+
+</script>*@
 

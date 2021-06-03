@@ -154,18 +154,21 @@ namespace PizzaOrderingSystem.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("address")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("amount")
                         .HasColumnType("float");
 
                     b.Property<string>("customerName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("datetime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("phoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -295,60 +298,66 @@ namespace PizzaOrderingSystem.Migrations
                         new
                         {
                             id = 1,
+                            amount = 0.0,
+                            name = "None"
+                        },
+                        new
+                        {
+                            id = 2,
                             amount = 30.0,
                             name = "Pepperoni(+30 Rs)"
                         },
                         new
                         {
-                            id = 2,
+                            id = 3,
                             amount = 40.0,
                             name = "Mushroom(+40 Rs)"
                         },
                         new
                         {
-                            id = 3,
+                            id = 4,
                             amount = 50.0,
                             name = "Onions(+50 Rs)"
                         },
                         new
                         {
-                            id = 4,
+                            id = 5,
                             amount = 70.0,
                             name = "Bacon(+70 Rs)"
                         },
                         new
                         {
-                            id = 5,
+                            id = 6,
                             amount = 80.0,
                             name = "Extra Cheese(+80 Rs)"
                         },
                         new
                         {
-                            id = 6,
+                            id = 7,
                             amount = 90.0,
                             name = "Black Olives(+90 Rs)"
                         },
                         new
                         {
-                            id = 7,
+                            id = 8,
                             amount = 100.0,
                             name = "Green Peppers(+100 Rs)"
                         },
                         new
                         {
-                            id = 8,
+                            id = 9,
                             amount = 150.0,
                             name = "Sausage(+150 Rs)"
                         },
                         new
                         {
-                            id = 9,
+                            id = 10,
                             amount = 80.0,
                             name = "Spinach(+80 Rs)"
                         },
                         new
                         {
-                            id = 10,
+                            id = 11,
                             amount = 90.0,
                             name = "Pineapple(+90 Rs)"
                         });

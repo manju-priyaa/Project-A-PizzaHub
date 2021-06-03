@@ -36,16 +36,17 @@ namespace PizzaOrderingSystem.Models
             modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 7, image = "~/imgs/soya.png", name = "Soya Golden Light", description = "Speacially made with Meal Makers to make extra tasty!!!", isVeg = true, amount = 799.99 });
             modelBuilder.Entity<Pizza>().HasData(new Pizza() { id = 8, image = "~/imgs/img1.jpg", name = "Chicken Golden Light", description = "Speacially made with Barbeque Chicken and golden corn to make extra tasty!!!", isVeg = false, amount = 899.99 });
 
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 1, name = "Pepperoni(+30 Rs)",amount = 30 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 2, name = "Mushroom(+40 Rs)", amount = 40 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 3, name = "Onions(+50 Rs)", amount = 50 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 4, name = "Bacon(+70 Rs)", amount = 70 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 5, name = "Extra Cheese(+80 Rs)", amount =80  });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 6, name = "Black Olives(+90 Rs)", amount = 90 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 7, name = "Green Peppers(+100 Rs)", amount = 100 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 8, name = "Sausage(+150 Rs)", amount = 150 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 9, name = "Spinach(+80 Rs)", amount = 80 });
-            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 10, name = "Pineapple(+90 Rs)", amount = 90 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 1, name = "None", amount = 0 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 2, name = "Pepperoni(+30 Rs)",amount = 30 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 3, name = "Mushroom(+40 Rs)", amount = 40 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 4, name = "Onions(+50 Rs)", amount = 50 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 5, name = "Bacon(+70 Rs)", amount = 70 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 6, name = "Extra Cheese(+80 Rs)", amount =80  });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 7, name = "Black Olives(+90 Rs)", amount = 90 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 8, name = "Green Peppers(+100 Rs)", amount = 100 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 9, name = "Sausage(+150 Rs)", amount = 150 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 10, name = "Spinach(+80 Rs)", amount = 80 });
+            modelBuilder.Entity<Toppings>().HasData(new Toppings() { id = 11, name = "Pineapple(+90 Rs)", amount = 90 });
 
 
             modelBuilder.Entity<Crusts>().HasData(new Crusts() { id = 1, name = "Flat Bread"});
